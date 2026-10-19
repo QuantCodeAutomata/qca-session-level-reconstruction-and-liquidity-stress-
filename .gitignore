@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Raw API / market data dumps (never commit)
+# (results/ PKLs and CSVs are deliverable artifacts — kept)
+data/raw/
+data/downloads/
+*.csv.gz
+*.parquet
+*.arrow
+
+# Large intermediate log files not needed in git
+# (exp2_run.log is stale; keep exp*_run_full.log as run record)
+results/exp2_run.log

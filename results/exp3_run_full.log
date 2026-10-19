@@ -1,0 +1,101 @@
+2026-10-19 08:59:26,175 [INFO] === Experiment 3: Structural Analysis of 3-Exp SDHP Fits ===
+2026-10-19 08:59:26,177 [INFO] Loaded 76 fit results from /workspace/project/results/exp2_fits.pkl
+2026-10-19 08:59:26,177 [INFO] 3-Exp fits: 19 converged (before subcriticality check)
+2026-10-19 08:59:26,238 [INFO] Subcritical 3-Exp sessions: 19  (paper target: ~2,788)
+2026-10-19 08:59:26,241 [INFO] 
+--- Pooled Medians by State ---
+2026-10-19 08:59:26,246 [INFO]                   rho         A      mu_H      mu_Q      G_HH      G_HQ      G_QH      G_QQ    Psi_HH    Psi_HQ    Psi_QH    Psi_QQ  t50_H->H    t50_H->Q    t50_Q->H   t50_Q->Q   t90_H->H    t90_H->Q    t90_Q->H   t90_Q->Q  mean_lag_H->H  mean_lag_H->Q  mean_lag_Q->H  mean_lag_Q->Q  ampl_H->H  ampl_H->Q  ampl_Q->H  ampl_Q->Q
+state_label                                                                                                                                                                                                                                                                                                                           
+Normal       0.109393  0.814169  0.004506  0.026720  0.041997  0.109773  0.007741  0.035315  1.061278  0.252113  0.010092  1.044196  9.121310  112.681592    7.656601  20.286570  30.376100  374.419866   25.434922  67.395504      13.182533     162.598683      11.046217      29.268363  25.270467   1.125452   1.125452  29.365157
+Stressed     0.280727  0.835470  0.003054  0.021351  0.036796  0.321199  0.086291  0.015579  1.057132  0.346126  0.092988  1.104050  2.213869   32.792569  105.587014   4.046713   7.358207  130.313278  423.135054  13.542391       3.194653      56.043894     183.764270       5.857605  38.758130   1.268225   1.268225  69.631482
+2026-10-19 08:59:26,246 [INFO] 
+Paper targets:
+2026-10-19 08:59:26,246 [INFO]   Normal: G_HH=0.8715, G_QQ=0.9047, rho=0.9518, A=-0.442
+2026-10-19 08:59:26,246 [INFO]   Stressed: G_HH=0.8777, G_QQ=0.8574, rho=0.9555, A=-0.175
+2026-10-19 08:59:26,247 [INFO] 
+--- Within-session Stressed-Normal differences (medians) ---
+2026-10-19 08:59:26,248 [INFO] delta_rho               0.079624
+delta_A                 0.020730
+delta_G_HH              0.011861
+delta_G_HQ              0.137488
+delta_G_QH              0.026797
+delta_G_QQ              0.010735
+delta_mu_H             -0.001434
+delta_mu_Q             -0.004520
+delta_Psi_H->H          0.032570
+delta_t50_H->H         -7.151232
+delta_mean_lag_H->H    -4.382395
+delta_Psi_H->Q          0.209253
+delta_t50_H->Q         -0.001331
+delta_mean_lag_H->Q    -0.530575
+delta_Psi_Q->H          0.016575
+delta_t50_Q->H         20.057533
+delta_mean_lag_Q->H    48.205709
+delta_Psi_Q->Q          0.067777
+delta_t50_Q->Q         -0.726537
+delta_mean_lag_Q->Q    -1.048166
+2026-10-19 08:59:26,248 [INFO] 
+Computing bootstrap CIs (n=1000) ...
+2026-10-19 08:59:26,715 [INFO]                quantity     median    lower_95    upper_95  pct_positive
+0             delta_rho   0.079624    0.023488    0.269862      0.736842
+1               delta_A   0.020730   -0.237694    0.273406      0.578947
+2            delta_G_HH   0.011861   -0.056979    0.023665      0.526316
+3            delta_G_HQ   0.137488   -0.108153    0.629992      0.578947
+4            delta_G_QH   0.026797    0.005167    0.115988      0.736842
+5            delta_G_QQ   0.010735   -0.021113    0.042728      0.578947
+6            delta_mu_H  -0.001434   -0.003244    0.000225      0.315789
+7            delta_mu_Q  -0.004520   -0.007398    0.000785      0.315789
+8        delta_Psi_H->H   0.032570   -0.055663    0.159869      0.631579
+9        delta_t50_H->H  -7.151232  -20.326909    0.006650      0.315789
+10  delta_mean_lag_H->H  -4.382395  -30.037836    1.993841      0.368421
+11       delta_Psi_H->Q   0.209253   -0.229528    0.868522      0.578947
+12       delta_t50_H->Q  -0.001331 -289.818688  115.706588      0.473684
+13  delta_mean_lag_H->Q  -0.530575 -454.114075  153.187109      0.421053
+14       delta_Psi_Q->H   0.016575    0.007276    0.189794      0.789474
+15       delta_t50_Q->H  20.057533   -0.562542  348.007907      0.631579
+16  delta_mean_lag_Q->H  48.205709   -0.658946  506.918422      0.684211
+17       delta_Psi_Q->Q   0.067777   -0.007952    0.339416      0.684211
+18       delta_t50_Q->Q  -0.726537  -23.831540    4.907204      0.368421
+19  delta_mean_lag_Q->Q  -1.048166  -34.382264    7.076741      0.421053
+2026-10-19 08:59:26,717 [INFO] 
+--- Month-by-month summary ---
+2026-10-19 08:59:26,718 [INFO]   state_label    month       rho         A    Psi_HQ    Psi_QH      G_HH      G_QQ
+0      Normal  2024-01  0.051926  0.214572  0.060798  0.021513  0.012826  0.013674
+1      Normal  2024-04  0.149175  0.281104  0.362641  0.008051  0.088492  0.050036
+2      Normal  2024-07  0.174393  0.971374  0.337116  0.003661  0.041997  0.035315
+3      Normal  2024-10  0.109393  0.219491  0.030690  0.041754  0.055493  0.103946
+4    Stressed  2024-01  0.109469  0.411747  0.060408  0.065280  0.030589  0.020617
+5    Stressed  2024-04  0.376053  0.835470  1.078775  0.267676  0.025031  0.015579
+6    Stressed  2024-07  0.392486  0.576475  0.346126  0.092988  0.044189  0.004570
+7    Stressed  2024-10  0.280727  0.961978  0.209261  0.017426  0.054039  0.027432
+2026-10-19 08:59:26,718 [INFO] 
+--- Response Speed: Mean Lag (seconds) ---
+2026-10-19 08:59:26,719 [INFO]   Normal:
+2026-10-19 08:59:26,719 [INFO]     H->H: 13.18 sec  (paper: 13.26)
+2026-10-19 08:59:26,719 [INFO]     H->Q: 162.60 sec  (paper: 0.24)
+2026-10-19 08:59:26,719 [INFO]     Q->H: 11.05 sec  (paper: 6.05)
+2026-10-19 08:59:26,719 [INFO]     Q->Q: 29.27 sec  (paper: 30.74)
+2026-10-19 08:59:26,720 [INFO]   Stressed:
+2026-10-19 08:59:26,720 [INFO]     H->H: 3.19 sec  (paper: 10.36)
+2026-10-19 08:59:26,720 [INFO]     H->Q: 56.04 sec  (paper: 0.50)
+2026-10-19 08:59:26,720 [INFO]     Q->H: 183.76 sec  (paper: 0.93)
+2026-10-19 08:59:26,720 [INFO]     Q->Q: 5.86 sec  (paper: 20.54)
+2026-10-19 08:59:26,724 [INFO] Saved CSVs to results/
+2026-10-19 08:59:27,079 [INFO] Saved plot: /workspace/project/results/exp3_branching_matrices.png
+2026-10-19 08:59:27,246 [INFO] Saved plot: /workspace/project/results/exp3_spillovers.png
+/workspace/project/exp/exp_3_structural_analysis.py:287: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.violinplot(data=summary_df[summary_df['state_label'].isin(states)],
+2026-10-19 08:59:27,477 [INFO] Saved plot: /workspace/project/results/exp3_asymmetry.png
+2026-10-19 08:59:27,662 [INFO] Saved plot: /workspace/project/results/exp3_response_speed.png
+/workspace/project/exp/exp_3_structural_analysis.py:348: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(data=plot_df, x='quantity', y='delta', ax=ax,
+2026-10-19 08:59:27,845 [INFO] Saved plot: /workspace/project/results/exp3_within_session_diffs.png
+2026-10-19 08:59:27,845 [INFO] Metrics appended to /workspace/project/results/RESULTS.md
+
+Exp 3 complete. Subcritical sessions: 19
